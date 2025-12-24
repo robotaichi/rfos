@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Family Project | Research Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <h1 class="logo">Robot Family Project</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about" data-i18n="nav_about">About</a></li>
+                    <li><a href="#research" data-i18n="nav_research">Research</a></li>
+                    <li><a href="#profile" data-i18n="nav_profile">Profile</a></li>
+                    <li><button id="lang-switch" class="btn-lang">EN / JP</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <h2 data-i18n="hero_title">家族のようなロボットが、<br>孤独を癒やす未来へ。</h2>
+            <p data-i18n="hero_subtitle">高齢者の孤独感を軽減するための、擬似家族ロボットシステムの構築と実証。</p>
+            <a href="#about" class="btn-primary" data-i18n="btn_more">詳しく見る</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h3 class="section-title" data-i18n="section_concept">Concept</h3>
+            <div class="content-grid">
+                <div class="text-box">
+                    <h4 data-i18n="concept_head">ロボット家族という新しい形</h4>
+                    <p data-i18n="concept_body">
+                        単なる機械ではなく、父親・母親・娘といった「役割」を持ったロボットたちが連携し、ユーザーを取り囲むエコシステムを提案します。一人暮らしの高齢者に寄り添い、社会的な繋がりを疑似的に再現する新しいアプローチです。
+                    </p>
+                </div>
+                <div class="img-box">
+                    <div class="placeholder-img">Robot Image Area</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="section bg-light">
+        <div class="container">
+            <h3 class="section-title" data-i18n="section_research">Research</h3>
+            <div class="cards">
+                <div class="card">
+                    <h4 data-i18n="res_topic1_title">役割分担アルゴリズム</h4>
+                    <p data-i18n="res_topic1_desc">複数のロボットが自律的に会話の役割（ボケ、ツッコミ、励まし）を分担し、自然な多人数会話を生成するシステム。</p>
+                </div>
+                <div class="card">
+                    <h4 data-i18n="res_topic2_title">感情推定と介入</h4>
+                    <p data-i18n="res_topic2_desc">ユーザーの微細な表情や声色から孤独度を推定し、最適なタイミングで「家族」として介入するAIモデル。</p>
+                </div>
+                <div class="card">
+                    <h4 data-i18n="res_topic3_title">社会的受容性</h4>
+                    <p data-i18n="res_topic3_desc">実際の高齢者施設での長期実証実験を通じた、人とロボットの共生に関する定量的・定性的評価。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile" class="section">
+        <div class="container profile-container">
+            <div class="profile-img">
+                <div class="placeholder-circle">Photo</div>
+            </div>
+            <div class="profile-text">
+                <h3 data-i18n="section_profile">Profile</h3>
+                <h4 data-i18n="my_name">Your Name</h4>
+                <p class="role" data-i18n="my_role">Ph.D. Candidate / Robotics Researcher</p>
+                <p data-i18n="my_bio">
+                    博士課程において「ロボット家族」による孤独感解消の研究に従事。機械加工からAIモデル構築までを一貫して行う。日本機械学会畠山賞受賞。次世代の社会インフラとしてのロボット共生社会を目指す。
+                </p>
+                <div class="links">
+                    <a href="#" class="link-item">Google Scholar</a>
+                    <a href="#" class="link-item">GitHub</a>
+                    <a href="#" class="link-item">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Robot Family Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
