@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robot Family Project | Research Portfolio</title>
+    <title>Robot Family OS (RFOS) | Next-Gen Social Infrastructure</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <div class="container header-flex">
-            <h1 class="logo">Robot Family Project</h1>
+            <h1 class="logo">Robot Family OS</h1>
             <nav>
                 <ul>
-                    <li><a href="#about" data-i18n="nav_about">About</a></li>
-                    <li><a href="#research" data-i18n="nav_research">Research</a></li>
-                    <li><a href="#profile" data-i18n="nav_profile">Profile</a></li>
+                    <li><a href="#concept" data-i18n="nav_concept">Concept</a></li>
+                    <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                    <li><a href="#tech" data-i18n="nav_tech">Technology</a></li>
+                    <li><a href="#publication" data-i18n="nav_pub">Publication</a></li>
                     <li><button id="lang-switch" class="btn-lang">EN / JP</button></li>
                 </ul>
             </nav>
@@ -25,46 +26,90 @@
 
     <section id="hero" class="hero">
         <div class="container hero-content">
-            <h2 data-i18n="hero_title">家族のようなロボットが、<br>孤独を癒やす未来へ。</h2>
-            <p data-i18n="hero_subtitle">高齢者の孤独感を軽減するための、擬似家族ロボットシステムの構築と実証。</p>
-            <a href="#about" class="btn-primary" data-i18n="btn_more">詳しく見る</a>
+            <h2 data-i18n="hero_title">孤独を「家族システム」で解決する。<br>次世代ロボットOS。</h2>
+            <p data-i18n="hero_subtitle">LLMとROS 2による、自律分散型・擬似家族対話生成プラットフォーム。</p>
+            <div class="hero-buttons">
+                <a href="#concept" class="btn-primary" data-i18n="btn_learn">構想を知る</a>
+                <a href="https://github.com/あなたのID/rfos" target="_blank" class="btn-secondary" data-i18n="btn_github">View on GitHub</a>
+            </div>
         </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="concept" class="section">
         <div class="container">
-            <h3 class="section-title" data-i18n="section_concept">Concept</h3>
+            <h3 class="section-title" data-i18n="section_concept">Concept & Significance</h3>
             <div class="content-grid">
                 <div class="text-box">
-                    <h4 data-i18n="concept_head">ロボット家族という新しい形</h4>
+                    <h4 data-i18n="concept_head">1対1から、N対1の「家族」へ。</h4>
                     <p data-i18n="concept_body">
-                        単なる機械ではなく、父親・母親・娘といった「役割」を持ったロボットたちが連携し、ユーザーを取り囲むエコシステムを提案します。一人暮らしの高齢者に寄り添い、社会的な繋がりを疑似的に再現する新しいアプローチです。
+                        孤独は1日15本の喫煙に匹敵する健康リスクです。従来の「ペットロボット（1対1）」では埋めきれない孤独感を、父・母・娘といった役割を持つ複数のロボットが連携する「Robot Family」によって解消します。<br><br>
+                        Robot Family OS (RFOS) は、複数のロボットが互いに対話し、ユーザーを含めた「家族の空気感」を醸成するための基盤ソフトウェアです。
                     </p>
                 </div>
                 <div class="img-box">
-                    <div class="placeholder-img">Robot Image Area</div>
+                    <div class="placeholder-img" data-i18n="img_concept_placeholder">Concept Image (Family Ecosystem)</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="research" class="section bg-light">
+    <section id="features" class="section bg-light">
         <div class="container">
-            <h3 class="section-title" data-i18n="section_research">Research</h3>
+            <h3 class="section-title" data-i18n="section_features">Key Features</h3>
             <div class="cards">
                 <div class="card">
-                    <h4 data-i18n="res_topic1_title">役割分担アルゴリズム</h4>
-                    <p data-i18n="res_topic1_desc">複数のロボットが自律的に会話の役割（ボケ、ツッコミ、励まし）を分担し、自然な多人数会話を生成するシステム。</p>
+                    <h4 data-i18n="feat_1_title">役割を持つマルチエージェント</h4>
+                    <p data-i18n="feat_1_desc">各ロボットが「父親（威厳）」「母親（受容）」「娘（無邪気）」などのペルソナを持ち、LLMにより自律的に性格を演じ分けます。</p>
                 </div>
                 <div class="card">
-                    <h4 data-i18n="res_topic2_title">感情推定と介入</h4>
-                    <p data-i18n="res_topic2_desc">ユーザーの微細な表情や声色から孤独度を推定し、最適なタイミングで「家族」として介入するAIモデル。</p>
+                    <h4 data-i18n="feat_2_title">システム間対話生成</h4>
+                    <p data-i18n="feat_2_desc">ロボット同士が会話することで、ユーザーは「見守られている安心感」を得られます。ユーザーの介入もシームレスに処理します。</p>
                 </div>
                 <div class="card">
-                    <h4 data-i18n="res_topic3_title">社会的受容性</h4>
-                    <p data-i18n="res_topic3_desc">実際の高齢者施設での長期実証実験を通じた、人とロボットの共生に関する定量的・定性的評価。</p>
+                    <h4 data-i18n="feat_3_title">集中 vs 分散 制御</h4>
+                    <p data-i18n="feat_3_desc">一貫性を重視した「集中型」と、即応性と多様性を重視した「分散型」の2つのアーキテクチャを実装・評価しています。</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="tech" class="section">
+        <div class="container">
+            <h3 class="section-title" data-i18n="section_tech">Technology Stack</h3>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>Core Framework</h4>
+                    <p><strong>ROS 2 (Jazzy Jalisco)</strong><br>分散処理ミドルウェアとして採用。</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Language & AI</h4>
+                    <p><strong>Python 3 & GPT-4o-mini</strong><br>言語生成および制御ロジック。</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Hardware Reference</h4>
+                    <p><strong>Sony toio™</strong><br>絶対位置制御による精密な移動と群制御を実現。</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Architecture</h4>
+                    <p><strong>Centralized & Distributed</strong><br>ハイブリッドな対話生成モデル。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publication" class="section bg-light">
+        <div class="container">
+            <h3 class="section-title" data-i18n="section_pub">Selected Publications</h3>
+            <ul class="pub-list">
+                <li>
+                    <span class="pub-year">2026</span>
+                    <div class="pub-info">
+                        <strong>Dialogue Generation for Family Robots Using ROS and Generative AI: Initial Implementation of Centralized and Distributed Systems</strong><br>
+                        Taichi Hirano and Fumihide Tanaka<br>
+                        <em>2026 IEEE/SICE International Symposium on System Integration (SII 2026)</em>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -74,16 +119,17 @@
                 <div class="placeholder-circle">Photo</div>
             </div>
             <div class="profile-text">
-                <h3 data-i18n="section_profile">Profile</h3>
-                <h4 data-i18n="my_name">Your Name</h4>
+                <h3 data-i18n="section_profile">Developer</h3>
+                <h4 data-i18n="my_name">Taichi Hirano</h4>
                 <p class="role" data-i18n="my_role">Ph.D. Candidate / Robotics Researcher</p>
                 <p data-i18n="my_bio">
-                    博士課程において「ロボット家族」による孤独感解消の研究に従事。機械加工からAIモデル構築までを一貫して行う。日本機械学会畠山賞受賞。次世代の社会インフラとしてのロボット共生社会を目指す。
+                    筑波大学大学院 知能機能システム学位プログラム 博士後期課程。
+                    「ロボット家族による孤独感の解消」をテーマに、社会インフラとしてのロボットOSの研究開発を行う。
+                    機械加工技能士のバックグラウンドと、最新の生成AI技術を融合した構成論的アプローチが特徴。
                 </p>
                 <div class="links">
                     <a href="#" class="link-item">Google Scholar</a>
-                    <a href="#" class="link-item">GitHub</a>
-                    <a href="#" class="link-item">LinkedIn</a>
+                    <a href="https://github.com/あなたのID" class="link-item">GitHub</a>
                 </div>
             </div>
         </div>
@@ -91,7 +137,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Robot Family Project. All Rights Reserved.</p>
+            <p>&copy; 2025 Robot Family OS Project. All Rights Reserved.</p>
         </div>
     </footer>
 
