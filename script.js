@@ -94,15 +94,17 @@ function updateHeroBackground() {
     currentImageIndex = (currentImageIndex + 1) % heroImages.length;
     const nextImageUrl = heroImages[currentImageIndex];
 
-    // 次のレイヤーを準備（右側に配置）
+    // 次のレイヤーを準備（アニメーションなしで即座に右側へ移動）
+    nextLayer.classList.add('no-transition');
     nextLayer.style.backgroundImage = `url('${nextImageUrl}')`;
     nextLayer.classList.remove('exit');
     nextLayer.classList.add('next');
 
     // 強制的にリフローさせてアニメーションを適用可能にする
     nextLayer.offsetWidth;
+    nextLayer.classList.remove('no-transition');
 
-    // アニメーション開始
+    // アニメーション開始 (次のレイヤーが右から中央へ、現在のレイヤーが中央から左へ)
     activeLayer.classList.remove('active');
     activeLayer.classList.add('exit');
 

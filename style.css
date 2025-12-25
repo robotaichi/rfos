@@ -146,6 +146,10 @@ nav a:hover {
     z-index: 1;
 }
 
+.no-transition {
+    transition: none !important;
+}
+
 .hero-content {
     position: relative;
     z-index: 10;
