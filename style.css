@@ -90,8 +90,12 @@ nav a:hover {
 
 /* Hero */
 .hero {
-    background: radial-gradient(circle at center, #1a2a3a 0%, var(--bg-dark) 100%);
-    padding: 120px 0;
+    background: linear-gradient(rgba(11, 14, 20, 0.6), rgba(11, 14, 20, 0.8)), url('images/concept.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* パララックス効果 */
+    padding: 180px 0;
     text-align: center;
     border-bottom: 1px solid var(--border);
 }
