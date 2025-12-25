@@ -73,3 +73,47 @@ function updateContent() {
     langSwitchBtn.textContent = currentLang === 'ja' ? 'English' : '日本語';
     document.documentElement.lang = currentLang;
 }
+// --- Background Slider ---
+const heroImages = [
+    'images/grandfather.jpg',
+    'images/grandmother.jpg'
+];
+let currentImageIndex = 0;
+const bgLayers = [
+    document.getElementById('hero-bg-1'),
+    document.getElementById('hero-bg-2')
+];
+let activeLayerIndex = 0;
+
+function updateHeroBackground() {
+    const nextLayerIndex = (activeLayerIndex + 1) % 2;
+    const activeLayer = bgLayers[activeLayerIndex];
+    const nextLayer = bgLayers[nextLayerIndex];
+
+    // 次の画像を取得
+    currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+    const nextImageUrl = heroImages[currentImageIndex];
+
+    // 次のレイヤーを準備（右側に配置）
+    nextLayer.style.backgroundImage = `url('${nextImageUrl}')`;
+    nextLayer.classList.remove('exit');
+    nextLayer.classList.add('next');
+
+    // 強制的にリフローさせてアニメーションを適用可能にする
+    nextLayer.offsetWidth;
+
+    // アニメーション開始
+    activeLayer.classList.remove('active');
+    activeLayer.classList.add('exit');
+
+    nextLayer.classList.remove('next');
+    nextLayer.classList.add('active');
+
+    activeLayerIndex = nextLayerIndex;
+}
+
+// Initial background setting
+bgLayers[0].style.backgroundImage = `url('${heroImages[0]}')`;
+
+// Start rotation cycle
+setInterval(updateHeroBackground, 5000);

@@ -90,14 +90,65 @@ nav a:hover {
 
 /* Hero */
 .hero {
-    background: linear-gradient(rgba(11, 14, 20, 0.6), rgba(11, 14, 20, 0.8)), url('images/concept.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    /* パララックス効果 */
+    position: relative;
     padding: 180px 0;
     text-align: center;
     border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    /* 背景のはみ出しを隠す */
+}
+
+.hero-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* 背景にグラデーションオーバーレイを重ねる */
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(11, 14, 20, 0.6), rgba(11, 14, 20, 0.8));
+}
+
+.hero-bg.active {
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.hero-bg.next {
+    transform: translateX(100%);
+    z-index: 2;
+}
+
+.hero-bg.exit {
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
 }
 
 .hero h2 {
