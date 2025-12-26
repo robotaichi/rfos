@@ -55,24 +55,50 @@ const translations = {
     }
 };
 
+// --- Language Switcher ---
 let currentLang = 'ja';
 
-const langSwitchBtn = document.getElementById('lang-switch');
-langSwitchBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'ja' ? 'en' : 'ja';
-    updateContent();
-});
+function switchLanguage(lang) {
+    if (lang) {
+        currentLang = lang;
+    } else {
+        currentLang = currentLang === 'ja' ? 'en' : 'ja';
+    }
 
-function updateContent() {
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
         if (translations[currentLang][key]) {
-            element.innerHTML = translations[currentLang][key];
+            el.innerHTML = translations[currentLang][key];
         }
     });
-    langSwitchBtn.textContent = currentLang === 'ja' ? 'English' : '日本語';
+
+    const langSwitchBtn = document.getElementById('lang-switch');
+    if (langSwitchBtn) {
+        langSwitchBtn.textContent = currentLang === 'ja' ? 'English' : '日本語';
+    }
     document.documentElement.lang = currentLang;
 }
+
+// Automatic Language Detection
+function detectLanguage() {
+    const browserLang = navigator.language || navigator.userLanguage;
+    if (browserLang.startsWith('ja')) {
+        switchLanguage('ja');
+    } else {
+        switchLanguage('en');
+    }
+}
+
+// Initialize Language
+detectLanguage();
+
+const langSwitchBtn = document.getElementById('lang-switch');
+if (langSwitchBtn) {
+    langSwitchBtn.addEventListener('click', () => {
+        switchLanguage(); // Call without argument to toggle
+    });
+}
+
 // --- Background Slider ---
 const heroImages = [
     'images/grandfather.jpg',
